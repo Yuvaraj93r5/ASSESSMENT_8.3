@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: placement-portal-deployment
+  labels:
+    app: placement-portal
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: placement-portal
+  template:
+    metadata:
+      labels:
+        app: placement-portal
+  spec:
+    containers:
+    - name: placement-portal
+      image: DOCKERHUB_USERNAME/placement-portal:latest
+      ports:
+      - containerPort: 80
+      imagePullPolicy: Always
