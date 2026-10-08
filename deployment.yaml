@@ -16,7 +16,7 @@ spec:
   spec:
     containers:
     - name: placement-portal
-      image: DOCKERHUB_USERNAME/placement-portal:latest
+      image: yuvaraj93/placement-portal:latest
       ports:
       - containerPort: 80
       imagePullPolicy: Always
